@@ -25,7 +25,11 @@ class PedidoProducto extends Migration
             $table->foreign('id_producto')
                 ->references('id')
                 ->on('producto');
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> 10d2a448f242072b295792f519174185ec30c4b7
             $table->timestamps();
         });
     }
