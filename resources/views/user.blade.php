@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<h1>Admiiiiiiiiiiiiiiiiiiiiinnnnnnnnnnnnnnnnnnnn</h1>
+<h1>usuariooooooooooooooooooooooooooooooooo</h1>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('Estas logueado como admin!') }}
+                    {{ __('Estas logueado como usuario!') }}
                 </div>
             </div>
         </div>

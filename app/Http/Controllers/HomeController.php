@@ -13,7 +13,9 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        //middleware de que este logueado
         $this->middleware('auth');
+        $this->middleware('soloadmin');['only' => ['index']];
     }
 
     /**

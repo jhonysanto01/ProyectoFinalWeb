@@ -45,7 +45,7 @@
                 <div class="categorias_titulo"><h2>Categorias</h2></div>
                 <div class="categoria">
                     {{-- hacer que las imagenes se vean --}}
-                    <div class="card" style="--i:url(/static/image/pantalla.jpg)">
+                    <div class="card" style="--i:{{URL::asset("https://www.asus.com/media/odin/websites/MX/News/dz0jvlpubnukghgy/2.jpg")}}">
                         <div class="content">
                             <h2>Monitores</h2>
                             <a href="/template/monitores.html">Ver detalles</a>
