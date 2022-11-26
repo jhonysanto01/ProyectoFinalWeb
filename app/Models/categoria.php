@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class rol extends Model
+class categoria extends Model
 {
     use HasFactory;
-    protected $table = 'rol';
+    protected $table = 'categoria';
 
     //Relacion uno a muchos
 
-    public function users()
+    public function producto()
     {
-        return $this->hasMany('App\Models\User');
+        return $this->hasMany('App\Models\producto');
     }
 }

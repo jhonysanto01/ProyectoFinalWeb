@@ -23,6 +23,18 @@ class User extends Authenticatable
         'password',
     ];
 
+    //Relacion uno a muchos
+
+    public function rol()
+    {
+        return $this->belongsTo('App\Models\rol');
+    }
+
+    public function pedido()
+    {
+        return $this->belongsTo('App\Models\pedido');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
