@@ -20,8 +20,6 @@ class Producto extends Migration
             $table->string('descripcion_producto');
             $table->string('precio_producto');
             $table->string('stock_producto');
-/*             $table->unsignedBigInteger('id_categoria')->nullable()->after('stock_producto');
-                $table->foreign('id_categoria')->references('id')->on('categoria'); */
             $table->timestamps();
         });
     }

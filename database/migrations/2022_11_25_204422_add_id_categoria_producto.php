@@ -16,7 +16,7 @@ class AddIdCategoriaProducto extends Migration
         //
         Schema::table('producto', function (Blueprint $table) {
             $table->unsignedBigInteger('id_categoria')->nullable()->after('stock_producto');
-                $table->foreign('id_categoria')->references('id')->on('categoria');
+                $table->foreign('id_categoria')->references('id')->on('categoria')->onDelete('onCascade');
         });
     }
 
