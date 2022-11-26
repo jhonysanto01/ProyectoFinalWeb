@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'id_rol',
     ];
 
     //Relacion uno a muchos
@@ -53,4 +54,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }

@@ -19,12 +19,12 @@ class PedidoProducto extends Migration
             $table->unsignedBigInteger('id_pedido')->nullable();
             $table->foreign('id_pedido')
                 ->references('id')
-                ->on('pedido')->onDelete('onCascade');
+                ->on('pedido');
 
             $table->unsignedBigInteger('id_producto')->nullable();
             $table->foreign('id_producto')
                 ->references('id')
-                ->on('producto')->onDelete('onCascade');
+                ->on('producto');
                 
             $table->timestamps();
         });
