@@ -69,15 +69,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($usuarios as $asas)
+                        @foreach ($usuarios as $user)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$asas->name}}</td>
-                                <td>{{$asas->email}}</td>
-                                <td>{{$asas->id_rol}}</td>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->id_rol}}</td>
                                 <td>
-                                    <a href="{{route('user.edit', $asas->id)}}" class="btn btn-warning">Editar</a>
-                                    <form action="{{route('user.destroy', $asas->id)}}" method="POST">
+                                    <a href="{{route('user.edit', $user->id)}}" class="btn btn-warning">
+                                        <button>Editar</button></a>
+                                    <form action="{{route('user.destroy', $user->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Eliminar</button>
