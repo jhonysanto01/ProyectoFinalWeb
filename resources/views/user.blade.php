@@ -1,7 +1,8 @@
-@extends('layouts.app')
+{{-- cambio la ruta del layout para poder mostrar aqui lo que quiero sin dejar volver a la pagina inicio si no a una nueva --}}
+@extends('layouts.userapp')
 <h1>usuariooooooooooooooooooooooooooooooooo</h1>
 @section('content')
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -19,5 +20,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection

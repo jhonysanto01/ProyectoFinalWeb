@@ -36,7 +36,7 @@ nav{
     color: black;
     font-size: 30px;
     padding: 10px;
-  
+
 }
 
 span{
@@ -80,7 +80,7 @@ nav ul li a:hover{
     padding: 3px;
     border-radius: 10px;
     box-shadow: 3px 5px 5px rgb(3,32,51,.8);
-    
+
  }
 
  h1{
@@ -153,7 +153,7 @@ p{
     margin: auto;
     overflow: hidden;
     margin-top: 100px;
-    
+
 }
 
 .slider ul{
@@ -161,14 +161,14 @@ p{
     padding: 0;
     width: 400%;
     animation: cambio 20s infinite alternate;
-    
+
 
 }
 
 .slider li{
     width: 100%;
     list-style: none;
-    
+
 }
 
 .slider img{
@@ -217,7 +217,6 @@ p{
     width: 200px;
     height: 300px;
     border-radius: 5px;
-    background: var(--i);
     background-size: cover;
     box-shadow: 3px 5px 5px rgb(3,32,51,.8);
 }
@@ -310,7 +309,7 @@ footer h1{
     justify-content: center;
     position: relative;
     border-top: 1px solid rgb(255, 255, 255, 0.8);
-    
+
 
 }
 
@@ -340,3 +339,23 @@ footer h1{
     align-items: center;
 }
 
+#monitores{
+    background-image: url(https://informaticapedia.com/wp-content/uploads/problemas-monitores-1024x576.jpg);
+    background-position: center;
+}
+
+#ram{
+    background-image:url(https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2016/01/142527-todo-que-necesitas-saber-memoria-ram.jpg) ;
+}
+#procesador{
+    background-image:url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_480x270/public/media/image/2021/12/procesador-intel-core-2553481.jpg?itok=ye_zBiv3);
+    background-position: center;
+}
+#tarjeta{
+    background-image:url(https://topesdegama.com/app/uploads-topesdegama.com/2022/09/graficas-portada.jpg?x=480&y=375&quality=40) ;
+    background-position: center;
+}
+#chasis{
+    background-image:url(https://atb.com.co/652-large_default/chasis-adata-gamer-xpg-excelente-refrigeracion-incluye-2-blanco.jpg);
+    background-position: center;
+}

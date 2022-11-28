@@ -18,15 +18,18 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="{{asset('css\style.css')}}" type="text/css"/>
 </head>
 <body>
+    {{-- barra de arriba --}}
+    {{--  --}}
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 {{-- manda a la vista inicio  --}}
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ __('Volver') }}
+                    {{ __('') }}
                     {{-- {{ config('app.name', 'Laravel') }} --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
