@@ -51,6 +51,47 @@
             <li><img src="{{URL::asset('https://http2.mlstatic.com/D_NQ_NP_825276-MLA48131245527_112021-O.jpg')}}" alt="" width="600" height="600"></li>
         </ul>
     </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <h1>EDITAR USUARIOS</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($usuarios as $asas)
+                            <tr>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$asas->name}}</td>
+                                <td>{{$asas->email}}</td>
+                                <td>{{$asas->id_rol}}</td>
+                                <td>
+                                    <a href="{{route('user.edit', $asas->id)}}" class="btn btn-warning">Editar</a>
+                                    <form action="{{route('user.destroy', $asas->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
     <div id="seccionCategoria"class="categorias">
         <div class="categorias_titulo"><h2>Categorias</h2></div>
         <div class="categoria">
