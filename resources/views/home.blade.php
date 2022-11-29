@@ -62,6 +62,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
+                            <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Email</th>
                             <th scope="col">Rol</th>
@@ -69,6 +70,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{-- como lo recibo en la vista --}}
                         @foreach ($usuarios as $user)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
@@ -76,9 +78,9 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->id_rol}}</td>
                                 <td>
-                                    <a href="{{route('user.edit', $user->id)}}" class="btn btn-warning">
+                                    <a href="{{route('actualizar.edit', $user->id)}}" class="btn btn-warning">
                                         <button>Editar</button></a>
-                                    <form action="{{route('user.destroy', $user->id)}}" method="POST">
+                                    <form action="{{route('actualizar.destroy', $user->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -86,6 +88,7 @@
                                 </td>
                             </tr>
                         @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>

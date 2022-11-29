@@ -1,28 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+/* AQUI UTILIZO EL MODELO USERS PARA PODER EDITAR LOS REGISTROS desde admin*/
 use App\Models\User;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
+    public function __construct()
+    {
+        //middleware de que este logueado
+        $this->middleware('auth');
+        $this->middleware('soloadmin');['only' => ['index']];
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function __construct()
-    {
-        //middleware de que este logueado
-        $this->middleware('auth');
-        $this->middleware('solouser');['only' => ['index']];
-    }
-
     public function index()
     {
         $usuarios= User::all();
-        return view('user');
+        /* como lo envio para la vista home */
+        return view('home')->with('usuarios', $usuarios);
     }
 
     /**
@@ -43,7 +44,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -55,7 +56,6 @@ class UserController extends Controller
     public function show($id)
     {
         //
-
     }
 
     /**
@@ -66,7 +66,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('actualizarUsuario')->with('usuarios', $user);
     }
 
     /**
@@ -78,7 +79,21 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->id_rol = $request->id_rol;
+        $user->save();
+        return redirect()->route('actualizar.index');
+
+
+        /* $user= User::find($id);
+        $user->name=$request->input('name');
+        $user->email=$request->input('email');
+        $user->password=$request->input('password');
+        $user->id_rol=$request->input('id_rol');
+        $user->save();
+        return redirect()->route('home'); */
     }
 
     /**
@@ -89,6 +104,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user= User::find($id);
+        $user->delete();
+        return redirect()->route('home');
     }
 }
