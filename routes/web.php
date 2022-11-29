@@ -23,5 +23,5 @@ Auth::routes();
 /* esta ruta es para al estar logueado permitirme que aparezca el estas logueado */
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('home', App\Http\Controllers\HomeController::class);
+Route::resource('home', \App\Http\Controllers\HomeController::class);
 Route::resource('/user', UserController::class);
