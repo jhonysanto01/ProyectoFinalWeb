@@ -1,7 +1,7 @@
 @include('headers.Head')
 <body>
     <h1>Holaaaa</h1>
-<!--     <form action="{{route('user.update',$user->id)}}" method="POST">
+     <form action="{{route('user.update',$user->id)}}" method="POST">
             @method('PUT')
             @csrf
             <label>Nombre</label>
@@ -14,5 +14,5 @@
         </form>
 <footer>
     @include('headers.Footer')
-</footer> -->
+</footer>
 </body>

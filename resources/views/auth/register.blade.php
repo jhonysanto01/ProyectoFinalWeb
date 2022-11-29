@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="{{asset('css\style_footer.css')}}" type="text/css"/>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/ac809dc774.js" crossorigin="anonymous"></script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -72,4 +74,7 @@
         </div>
     </div>
 </div>
+<footer>
+    @include('headers.Footer')
+</footer>
 @endsection
