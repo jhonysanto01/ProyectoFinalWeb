@@ -4,7 +4,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/ac809dc774.js" crossorigin="anonymous"></script>
 
 <body>
-    
 
 <div class="container">
     <div class="row justify-content-center">
@@ -84,7 +83,6 @@
 </div>
 
 </body>
-
 <footer>
 
     @include('headers.Footer')
