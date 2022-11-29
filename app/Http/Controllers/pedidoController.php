@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\pedido_producto;
 
 class pedidoController extends Controller
 {
