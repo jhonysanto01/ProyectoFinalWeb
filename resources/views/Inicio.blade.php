@@ -37,47 +37,12 @@
         <div class="slider">
             <ul>
                 <li><img src="{{URL::asset('https://concepto.de/wp-content/uploads/2018/09/RAM1-e1537470550128.jpg')}}" alt="" width="600" height="600"></li>
-                <li><img src="{{URL::asset('https://i.blogs.es/09647f/grafica/450_1000.webp')}}" alt=""></li>
-                <li><img src="{{URL::asset('https://f1web.co/GEAR/wp-content/uploads/2021/06/chasis-gabinete-pc-bogota.jpg')}}" alt=""></li>
+                <li><img src="{{URL::asset('https://i.blogs.es/09647f/grafica/450_1000.webp')}}" alt="" width="600" height="600"></li>
+                <li><img src="{{URL::asset('https://f1web.co/GEAR/wp-content/uploads/2021/06/chasis-gabinete-pc-bogota.jpg')}}" alt="" width="600" height="600"></li>
                 <li><img src="{{URL::asset('https://http2.mlstatic.com/D_NQ_NP_825276-MLA48131245527_112021-O.jpg')}}" alt="" width="600" height="600"></li>
             </ul>
         </div>
-        <div id="seccionCategoria"class="categorias">
-            <div class="categorias_titulo"><h2>Categorias</h2></div>
-            <div class="categoria">
-                {{-- hacer que las imagenes se vean --}}
-                <div class="card" id="monitores">
-                    <div class="content">
-                        <h2>Monitores</h2>
-                        <a href="/template/ram.html">Ver detalles</a>
-                    </div>
-                </div>
-                <div class="card" id="ram">
-                    <div class="content">
-                        <h2>Memoria RAM</h2>
-                        <a href="/template/ram.html">Ver detalles</a>
-                    </div>
-                </div>
-                <div class="card" id="procesador">
-                    <div class="content">
-                        <h2>Procesador</h2>
-                        <a href="/template/procesadores.html">Ver detalles</a>
-                    </div>
-                </div>
-                <div class="card" id="tarjeta">
-                    <div class="content">
-                        <h2>Tarjeta Grafica</h2>
-                        <a href="#">Ver detalles</a>
-                    </div>
-                </div>
-                <div class="card" id="chasis">
-                    <div class="content">
-                        <h2>Chasis</h2>
-                        <a href="#">Ver detalles</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('layouts.category')
     </body>
     <footer>
         @include('headers.Footer')

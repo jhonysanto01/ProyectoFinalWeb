@@ -1,7 +1,8 @@
 {{-- @include('headers.Head') --}}
 <h1>entramos a la pagina/vista de actualizar</h1>
 <body>
-     <form action="{{route('actualizar.update',$usuarios->id)}}" method="POST">
+    <h1>Holaaaa</h1>
+<!--     <form action="{{route('user.update',$user->id)}}" method="POST">
             @method('PUT')
             @csrf
             <label>Nombre</label>
@@ -14,5 +15,5 @@
         </form>
 <footer>
     @include('headers.Footer')
-</footer>
+</footer> -->
 </body>
