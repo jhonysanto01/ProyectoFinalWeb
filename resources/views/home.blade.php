@@ -51,10 +51,13 @@
             <li><img src="{{URL::asset('https://http2.mlstatic.com/D_NQ_NP_825276-MLA48131245527_112021-O.jpg')}}" alt="" width="600" height="600"></li>
         </ul>
     </div>
+
+    
     <div class="container text-center">
         <div class="row">
             <div class="col-12">
                 <h1>EDITAR USUARIOS</h1>
+                <a href="{{ route('descargar-pdf') }}"><button>listado usuarios (PDF)</button></a>
             </div>
         </div>
         <div class="row">
@@ -93,58 +96,6 @@
             </div>
         </div>
     </div>
-
-    <div class="container text-center">
-        <div>
-            <a type="button" href="{{route('productos.create')}}">Crear productos</a>
-            </div>
-        <div class="row">
-            <div class="col-12">
-                <h1>EDITAR PRODUCTOS</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre Producto</th>
-                            <th scope="col">Descripcion Producto</th>
-                            <th scope="col">Precio Producto</th>
-                            <th scope="col">Stock Producto</th>
-                            <th scope="col">ID Categoria</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{-- como lo recibo en la vista --}}
-                        @foreach ($productos as $producto)
-                            <tr>
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$producto->nombre_producto}}</td>
-                                <td>{{$producto->descripcion_producto}}</td>
-                                <td>{{$producto->precio_producto}}</td>
-                                <td>{{$producto->stock_producto}}</td>
-                                <td>{{$producto->id_categoria}}</td>
-                                <td>
-                                    <a href="{{route('productos.edit', $producto->id)}}" class="btn btn-warning">
-                                        <button>Editar</button></a>
-                                    <form action="{{route('productos.destroy', $producto->id)}}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Eliminar</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-
 
     <div id="seccionCategoria"class="categorias">
         <div class="categorias_titulo"><h2>Categorias</h2></div>

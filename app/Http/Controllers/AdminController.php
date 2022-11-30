@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 /* AQUI UTILIZO EL MODELO USERS PARA PODER EDITAR LOS REGISTROS desde admin*/
 use App\Models\User;
+use Barry\DomPDF\Facade as PDF;
 
 class AdminController extends Controller
 {
@@ -107,5 +108,11 @@ class AdminController extends Controller
         $user= User::find($id);
         $user->delete();
         return redirect()->route('home');
+    }
+
+    public function generar_pdf(){
+        $usuarios= User::all();
+        $pdf = \PDF::loadView('generar_pdf', compact('usuarios'));
+        return $pdf->download('usuarios.pdf');
     }
 }
