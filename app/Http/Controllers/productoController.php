@@ -13,8 +13,8 @@ class productoController extends Controller
      */
     public function index(){
 
-        $productos = Producto::all();
-        return view('home')->with('productos',$productos);
+        $product = Producto::all();
+        return view('home')->with('productos',$product);
     }
 
     /**
@@ -36,14 +36,19 @@ class productoController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $producto = new Producto();
-        $producto->nombre_producto = $request->nombre_producto;
-        $producto->descripcion_producto = $request->descripcion_producto;
-        $producto->precio_producto = $request->precio_producto;
-        $producto->stock_producto = $request->stock_producto;
-        $producto->id_categoria = $request->id_categoria;
-        $producto->save();
+        $nombre_producto=$request->input('nombre_producto');
+        $descripcion_producto=$request->input('descripcion_producto');
+        $precio_producto=$request->input('precio_producto');
+        $stock_producto=$request->input('stock_producto');
+        $id_categoria=$request->input('id_categoria');
+
+        $product = new Producto();
+        $product->nombre_producto = $nombre_producto;
+        $product->descripcion_producto = $descripcion_producto;
+        $product->precio_producto = $precio_producto;
+        $product->stock_producto = $stock_producto;
+        $product->id_categoria = $id_categoria;
+        $product->save();
         return redirect()->route('productos.index');
     }
 
@@ -67,8 +72,8 @@ class productoController extends Controller
     public function edit($id)
     {
         //
-        $productos=Producto::find($id);
-        return view('actualizarProducto')->with('productos',$productos);
+        $product=Producto::find($id);
+        return view('actualizarProducto')->with('productos',$product);
     }
 
     /**
@@ -81,13 +86,13 @@ class productoController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $productos=Producto::find($id);
-        $productos->nombre_producto = $request->nombre;
-        $productos->descripcion_producto = $request->descripcion;
-        $productos->precio_producto = $request->precio;
-        $productos->stock_producto = $request->stock;
-        $productos->id_categoria = $request->id_categoria;
-        $productos->save();
+        $product=Producto::find($id);
+        $product->nombre_producto = $request->nombre;
+        $product->descripcion_producto = $request->descripcion;
+        $product->precio_producto = $request->precio;
+        $product->stock_producto = $request->stock;
+        $product->id_categoria = $request->id_categoria;
+        $product->save();
         return redirect()->route('productos.index');
     }
 
@@ -100,8 +105,8 @@ class productoController extends Controller
     public function destroy($id)
     {
         //
-        $productos=Producto::find($id);
-        $productos->delete();
+        $product=Producto::find($id);
+        $product->delete();
         return redirect()->route('productos.index');
     }
 }

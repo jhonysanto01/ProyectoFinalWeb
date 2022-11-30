@@ -97,6 +97,13 @@
         </div>
     </div>
 
+    <div class="container text-center">
+        <div>
+            <a href="{{route('productos.create')}}"><button>CREAR PRODUCTOS</button></a>
+            </div>
+        <div class="row">
+    </div>
+
     <div id="seccionCategoria"class="categorias">
         <div class="categorias_titulo"><h2>Categorias</h2></div>
         <div class="categoria">

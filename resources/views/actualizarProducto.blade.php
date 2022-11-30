@@ -1,6 +1,6 @@
 {{-- @include('headers.Head') --}}
 <h1>vista de actualizar productos</h1>
-<body>
+{{--<body>
     <form action="{{route('actualizar.update',$usuarios->id)}}" method="POST">
             @method('PUT')
             @csrf
@@ -15,4 +15,4 @@
 <footer>
     @include('headers.Footer')
 </footer>
-</body>
+</body>--}}

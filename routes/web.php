@@ -23,8 +23,9 @@ Route::get('/', function () {
 });
 
 /* aqui le coloco la ruta /actualizar a el admin controller para llamar sus metodos es importante el orden de los controladores*/
-Route::resource('actualizar', AdminController::class);
 Route::resource('productos', ProductoController::class);
+Route::resource('actualizar', AdminController::class);
+
 Route::get('download-pdf','\App\Http\Controllers\AdminController@generar_pdf')->name('descargar-pdf');
 Auth::routes();
 /* esta ruta es para al estar logueado permitirme que aparezca el estas logueado y aparte dejar que funcionen las demas vistas*/
