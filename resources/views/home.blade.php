@@ -31,7 +31,7 @@
     <div class="container">
         <div class="hero">
             <nav class="nav-navegation">
-                <h2 class="nav-navegation__logo">Eco<span>mmerce</span>    <i class="fa-solid fa-laptop"></i></h2>
+                <h2 class="nav-navegation__logo"><span>Techsystems</span>    <i class="fa-solid fa-gift"></i></h2>
                 <ul>
                     <li><a href=" "><i class="fa-solid fa-house"></i>  Inicio</a></li>
                     <li><a href="#seccionCategoria"><i class="fa-solid fa-bars"></i>   Categorias</a></li>
@@ -52,7 +52,7 @@
         </ul>
     </div>
 
-    
+
     <div class="container text-center">
         <div class="row">
             <div class="col-12">

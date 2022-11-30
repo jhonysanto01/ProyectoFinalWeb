@@ -4221,10 +4221,10 @@ textarea.form-control-lg {
 .card-header {
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
   margin-bottom: 0;
-  color: black;
+  color: white;
   /* color: var(--bs-card-cap-color); */
   /* background-color: var(--bs-card-cap-bg); */
-  background-color: rgb(92, 92, 92);
+  background-color: rgb(211, 114, 3);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
 .card-header:first-child {
