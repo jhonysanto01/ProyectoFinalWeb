@@ -1,5 +1,5 @@
 {{-- @include('headers.Head') --}}
-<h1>entramos a la pagina/vista de actualizar</h1>
+<h1>vista de actualizar productos</h1>
 <body>
     <form action="{{route('actualizar.update',$usuarios->id)}}" method="POST">
             @method('PUT')

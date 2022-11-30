@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 /* no olvidar llamar a los controladores para poderlos usar */
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/', function () {
 
 /* aqui le coloco la ruta /actualizar a el admin controller para llamar sus metodos es importante el orden de los controladores*/
 Route::resource('actualizar', AdminController::class);
+Route::resource('productos', ProductoController::class);
 Auth::routes();
 /* esta ruta es para al estar logueado permitirme que aparezca el estas logueado y aparte dejar que funcionen las demas vistas*/
 /* en si es la que manda a las rutas especificas del admin */
